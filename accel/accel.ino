@@ -17,14 +17,10 @@ int cnt = 0;
 
 void loop() {
 
-  delay(10);
-  M5.IMU.getAccelData(&X,&Y,&Z);
-//  M5.IMU.getGyroData(&X,&Y,&Z);
-  Serial.print(X);
-  Serial.print(" ");
-  Serial.print(Y);
-  Serial.print(" ");
-  Serial.print(Z);
-  Serial.print("\n");
+  delay(1);
+  M5.IMU.getAccelData(&X,&Y,&Z); // get the data from the sensor and store in the respective variables
+  Serial.print(X); // print out the accelerometer value along X-axis
+//  similarly you can access the y and z axis values
+  Serial.print("\n"); // not relevant for the functionality of the code.
   
 }
